@@ -1,0 +1,6 @@
+Options +FollowSymlinks
+RewriteEngine On
+Options -Indexes
+IndexIgnore */*
+RewriteRule ^(.+)?$ web/$1
+
