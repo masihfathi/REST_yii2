@@ -22,6 +22,21 @@ $config = [
 //            ],
 //        ],    
     'components' => [
+        'view'=>[
+            'class'=>'yii\twig\View',
+            'renderers'=>[
+                'twig'=>[
+                    'class'=>'yii\twig\ViewRenderer',
+                    'cachePath'=>'@runtime/Twig/cache',
+                    //Array of twig Options:
+                    'options'=>[
+                        'auto_reload'=>true,
+                    ],
+                    'globals'=>['html'=>'\yii\helpers\Html'],
+                    'uses'=>['yii\bootstrap'],
+                ],
+            ],
+        ],
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
             'itemTable' => 'rbac_item',
